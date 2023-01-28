@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,37 +13,44 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d6A-ME-wfT">
-                                <rect key="frame" x="62" y="132" width="266" height="60"/>
+                                <rect key="frame" x="54.5" y="85" width="266" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwf-Qn-S38">
-                                <rect key="frame" x="70" y="701" width="250" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-sq-FKf">
+                                <rect key="frame" x="70" y="548" width="235" height="50"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Fsr-wm-TOm"/>
+                                    <constraint firstAttribute="height" constant="50" id="Q9A-9y-haq"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="tintColor" systemColor="systemGray4Color"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Text">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show Text"/>
+                                <connections>
+                                    <action selector="makeButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQX-ht-jvE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fwf-Qn-S38" secondAttribute="bottom" constant="59" id="EFP-hv-Gqq"/>
-                            <constraint firstItem="d6A-ME-wfT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="FSW-dS-kVf"/>
+                            <constraint firstItem="d6A-ME-wfT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="1fo-Rx-wNu"/>
                             <constraint firstItem="d6A-ME-wfT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M1e-Qi-mWq"/>
-                            <constraint firstItem="Fwf-Qn-S38" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aoh-nU-n0D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZSt-sq-FKf" secondAttribute="bottom" constant="69" id="dGd-KQ-uvC"/>
+                            <constraint firstItem="ZSt-sq-FKf" firstAttribute="centerX" secondItem="d6A-ME-wfT" secondAttribute="centerX" id="djp-rD-qOO"/>
+                            <constraint firstItem="ZSt-sq-FKf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="oSq-KE-sDB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloWorldLabel" destination="d6A-ME-wfT" id="bjG-Oo-8B1"/>
+                        <outlet property="toggleButton" destination="ZSt-sq-FKf" id="sMu-9X-9VD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
